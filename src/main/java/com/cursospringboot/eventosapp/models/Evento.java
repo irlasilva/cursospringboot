@@ -1,6 +1,13 @@
 package com.cursospringboot.eventosapp.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Evento {
+	
+	@Id
+	private long codigo;
 	
 	private String nome;
 	private String local;
