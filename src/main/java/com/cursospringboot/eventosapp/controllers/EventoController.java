@@ -11,9 +11,10 @@ public class EventoController {
 	@RequestMapping("/cadastrarEvento")
 	public String form() { return "formEvento";	}
 
-	@RequestMapping(name = "/salvarEvento", method = RequestMethod.POST)
+	@RequestMapping(name = "/salvar", method = RequestMethod.POST)
 	public String salvar( Evento evento) {
 		System.out.println(evento.getNome());
 		return "formEvento"; }
 
 }
+git
