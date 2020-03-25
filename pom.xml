@@ -17,6 +17,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+
 	</properties>
 
 	<dependencies>
@@ -47,8 +48,12 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-conector-java</artifactId>
-			<version>8.0.15</version>
 			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 

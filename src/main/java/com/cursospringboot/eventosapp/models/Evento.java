@@ -1,19 +1,21 @@
 package com.cursospringboot.eventosapp.models;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class Evento {
-	
+@Table
+public class Evento implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long codigo;
 	
 	private String nome;
 	private String local;
 	private String data;
 	private String horario;
-	private String descricao;
 	
 	public Evento() {
 		super();
@@ -27,6 +29,8 @@ public class Evento {
 		this.horario = horario;
 	}
 
+	public long getCodigo() { return codigo; }
+	public void setCodigo(long codigo) { this.codigo = codigo;	}
 	public String getNome() {
 		return nome;
 	}
@@ -51,11 +55,5 @@ public class Evento {
 	public void setHorario(String horario) {
 		this.horario = horario;
 	}
-	public String getDescricao() {
-		return descricao;
-	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-	
+
 }
